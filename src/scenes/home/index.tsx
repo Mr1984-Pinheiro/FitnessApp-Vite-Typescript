@@ -20,15 +20,14 @@ const Home = ({ setSelectedPage }: Props) => {
     id="home"
     className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0"
   >
-
     {/*IMAGE AND MAIN HEADER */}
-    <div>
+    <div className='md:flex mx-auto w-5/6 items-center justify-center md:h-5/6'>
        {/*MAIN HEADER */}
-       <div>
+       <div className='z-10 mt-32 md:basis-3/5'>
          {/*HEADINGS */}
-         <div>
-          <div>
-            <div>
+         <div className='md:-mt-20'>
+          <div className='relative'>
+            <div className='before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext'>
               <h1 className="font-bold text-gray-600 text-9xl">DEVGYM</h1>
               <h3 className="text-gray-600 text-5xl">transformation fitness</h3>
             </div>
@@ -57,7 +56,7 @@ const Home = ({ setSelectedPage }: Props) => {
 
         {/*IMAGE*/}
         <div>
-          <img src={HomePageGraphic} alt="Imagem de Steve Buissinne por Pixabay" />
+          <img className='rounded-full w-5/6 h-5/6' src={HomePageGraphic} alt="Imagem de Steve Buissinne por Pixabay" />
         </div>
     </div>
 
@@ -67,6 +66,8 @@ const Home = ({ setSelectedPage }: Props) => {
             <div>
               <div>
                 <img src={SponsorRedBull} alt="redbull-sponsor" />
+                <img src={SponsorForbes} alt="forbes-sponsor" />
+                <img src={SponsorFortune} alt="fortune-sponsor" />
               </div>
             </div>
           </div>
