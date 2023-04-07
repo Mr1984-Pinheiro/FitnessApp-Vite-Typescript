@@ -23,24 +23,24 @@ const Home = ({ setSelectedPage }: Props) => {
     {/*IMAGE AND MAIN HEADER */}
     <div className='md:flex mx-auto w-5/6 items-center justify-center md:h-5/6'>
        {/*MAIN HEADER */}
-       <div className='z-10 mt-32 md:basis-3/5'>
+       <div className='mt-32 md:basis-3/5'>
          {/*HEADINGS */}
-         <div className='md:-mt-20'>
+         <div className='md:-mt-20 '>
           <div className='relative'>
-            <div className='before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext'>
+            <div className=''>
               <h1 className="font-bold text-gray-600 text-9xl">DEVGYM</h1>
               <h3 className="text-gray-600 text-5xl">transformation fitness</h3>
             </div>
           </div>
 
-          <p>Your best option when leading a healthier life.
+          <p className='mt-8 text-sm'>Your best option when leading a healthier life.
           The best equipment, infrastructure and much more with affordable monthly fees.
           Taking care of your health and well-being is also loving yourself!
           </p>
          </div>
 
          {/*ACTIONS */}
-         <div>
+         <div className='mt-8 flex items-center gap-8 md:justify-start'>
           <ActionButton setSelectedPage={setSelectedPage} >
               Join now
           </ActionButton>
@@ -55,16 +55,18 @@ const Home = ({ setSelectedPage }: Props) => {
        </div>
 
         {/*IMAGE*/}
-        <div>
-          <img className='rounded-full w-5/6 h-5/6' src={HomePageGraphic} alt="Imagem de Steve Buissinne por Pixabay" />
+        <div className='flex md:justify-items-end basis-3/5 justify-center mt-8'
+          
+        >
+          <img className='rounded-full w-96 h-96 mt-8  ' src={HomePageGraphic} alt="Imagem de Steve Buissinne por Pixabay" />
         </div>
     </div>
 
         {/*SPONSORS*/}
         {isAboveMediumScreens && (
-          <div>
-            <div>
-              <div>
+          <div className='h-[150px] w-full bg-primary-100 py-10'>
+            <div className=' mx-auto w-5/6'>
+              <div className='flex w-3/5 items-center justify-between gap-8'>
                 <img src={SponsorRedBull} alt="redbull-sponsor" />
                 <img src={SponsorForbes} alt="forbes-sponsor" />
                 <img src={SponsorFortune} alt="fortune-sponsor" />
