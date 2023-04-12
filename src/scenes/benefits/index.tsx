@@ -1,11 +1,29 @@
 import HText from "@/shared/HText";
-import { SelectedPage } from "@/shared/types"
+import { BenefitsType, SelectedPage } from "@/shared/types"
 import { 
     HomeModernIcon,
     UserGroupIcon,
     AcademicCapIcon 
 } from "@heroicons/react/24/solid"
 import { motion } from "framer-motion";
+
+const benefits: Array<BenefitsType> = [
+  {
+    icon: <HomeModernIcon className="h-6 w-6" />,
+    title: "State of the Art Facilities",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to"
+  },
+  {
+    icon: <UserGroupIcon className="h-6 w-6" />,
+    title: "100's of Diverse Classes",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to"
+  },
+  {
+    icon: <AcademicCapIcon className="h-6 w-6" />,
+    title: "Expert and Pro Trainers",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to"
+  },
+];
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
@@ -32,6 +50,18 @@ const Benefits = ({setSelectedPage}: Props) => {
       </div>
 
       {/* BENEFITS */}
+      <div className="md:flex items-center justify-between gap-8 mt-5">
+        {benefits.map((benefit: BenefitsType) => (
+          <Benefit
+            key={benefit.title}
+            icon={benefit.icon}
+            title={benefit.title}
+            description={benefit.description}
+            setSelectedPage={setSelectedPage}
+          />
+        ))}
+
+      </div>
 
     </motion.div> 
 
