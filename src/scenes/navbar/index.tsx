@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import Logo from "@/assets/Logo.png"
 import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
@@ -27,7 +26,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
               {/*LEFT SIDE */}
               <div className="flex items-center ">
                 <p className="mr-1 text-gray-600 font-bold">DEVGYM</p>
-                <div className="w-5 h-5 bg-secondary-500 rounded-xl"></div>
+                <div className="w-4 h-4 bg-secondary-500 rounded-xl"></div>
               </div>
               
 
