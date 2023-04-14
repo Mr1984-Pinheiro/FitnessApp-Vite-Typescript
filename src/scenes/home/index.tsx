@@ -41,8 +41,8 @@ const Home = ({ setSelectedPage }: Props) => {
          >
           <div className='relative'>
             <div className=''>
-              <h1 className="font-bold text-gray-600 text-9xl">DEVGYM</h1>
-              <h3 className="text-gray-600 text-5xl">transformation fitness</h3>
+              <h1 className="font-bold text-gray-600 md:text-9xl text-6xl">DEVGYM</h1>
+              <h3 className="text-gray-600 md:text-5xl text-2xl">transformation fitness</h3>
             </div>
           </div>
 
